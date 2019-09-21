@@ -171,9 +171,14 @@ $('#content').load('load.php');
   
 var url = "https://api.cryptonator.com/api/ticker/btc-rur";
 
+var jsonData = $.ajax({
+    dataType: "json",
+    url: url, https://api.cryptonator.com/api/ticker/btc-rur
+    data: data,
+    success: success
+});
 
-
- document.getElementById("demo1").innerHTML = url;
+ document.getElementById("demo1").innerHTML = jsonData;
 
 </script>
 
