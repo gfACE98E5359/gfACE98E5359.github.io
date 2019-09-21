@@ -162,22 +162,36 @@ $('#content').load('load.php');
 
 <div id="content"> 
 
-
-
-
 <center>
-
-
-
 
 <center>
 <big><big><big><big><big style="color: #BA0054">
+
+<script>
+  
+var url = "https://api.cryptonator.com/api/ticker/btc-rur";
+
+var jsonData = $.ajax({
+    dataType: "json",
+    url: url,https://api.cryptonator.com/api/ticker/btc-rur
+    data: data,
+    success: success
+});
+
+document.write(jsonData);
+
+</script>
+
+
+
 <?php
 define("LINK", 'https://api.cryptonator.com/api/ticker/btc-rur');
 $data = file_get_contents(LINK);
 $courses = json_decode($data, true);
 echo (int) (($courses['ticker']['price'])*1.05);
 ?>
+
+
 </big></big></big></big></big><br>
 <i>Текущий курс на<br>
 данный момент</i>
@@ -254,15 +268,6 @@ var x = setInterval(function() {
 
 
 </center>
-
-
-
-
-
-
-
-
-
 
 
 
