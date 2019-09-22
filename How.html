@@ -50,7 +50,7 @@ setInterval
 function()
 
 {  
-$('#content').load('#content');  
+$('#content').load('load.html');  
 }, 
 
 60000);
@@ -171,25 +171,21 @@ $('#content').load('#content');
   
 var url = "https://api.cryptonator.com/api/ticker/btc-rur";
 
-var jsonData = $.ajax({
-    dataType: "json",
-    url: url,
-    data: data,
-    success: success
-});
 
- document.getElementById("demo1").innerHTML = jsonData;
+$.ajax({
+  method: "GET",
+  cache: false,
+  url: url,
+  success: function(data) {
+    document.getElementById('content').innerHTML = data.total;
+  },
+  error: function(error) {
+    //What do you want to do with the error?
+  },
+});
 
 </script>
 
-
-
-<?php
-define("LINK", 'https://api.cryptonator.com/api/ticker/btc-rur');
-$data = file_get_contents(LINK);
-$courses = json_decode($data, true);
-echo (int) (($courses['ticker']['price'])*1.05);
-?>
 
 
 </big></big></big></big></big><br>
@@ -261,10 +257,6 @@ var x = setInterval(function() {
     </td>
    </tr> 
   </table> 
-
-
-
-
 
 
 </center>
