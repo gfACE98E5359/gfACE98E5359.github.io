@@ -169,22 +169,20 @@ $('#content').load('load.html');
 
 <p  style="color: #BA0054" id="demo0"></p>
 
-</big></big></big></big></big><br>
-<i>Текущий курс на<br>
-данный момент</i>
-
 <script>
-
 var url = "https://api.cryptonator.com/api/ticker/btc-rur";
-
 
 $.getJSON( url, function(data) { 
  $.trim( document.getElementById('demo0').innerHTML = parseInt((data.ticker.price)*1.05))
 });
 
-
-
 </script>
+
+</big></big></big></big></big><br>
+<i>Текущий курс на<br>
+данный момент</i>
+
+
 
 
 
