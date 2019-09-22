@@ -179,7 +179,7 @@ var url = "https://api.cryptonator.com/api/ticker/btc-rur";
 
 
 $.getJSON( url, function(data) { 
-  document.getElementById('demo0').innerHTML = json.ticker.price;
+  document.getElementById('demo0').innerHTML = data.ticker.price;
 });
 
 
