@@ -165,7 +165,13 @@ $('#content').load('load.html');
 <center>
 
 <center>
-<big><big><big><big><big style="color: #BA0054" id="demo1">
+<big><big><big><big><big>
+
+<p  style="color: #BA0054" id="demo0"></p>
+
+</big></big></big></big></big><br>
+<i>Текущий курс на<br>
+данный момент</i>
 
 <script>
   
@@ -177,7 +183,7 @@ $.ajax({
   cache: false,
   url: url,
   success: function(data) {
-    document.getElementById('content').innerHTML = data.total;
+    document.getElementById('demo0').innerHTML = data.total;
   },
   error: function(error) {
     //What do you want to do with the error?
@@ -185,16 +191,6 @@ $.ajax({
 });
 
 </script>
-
-
-
-</big></big></big></big></big><br>
-<i>Текущий курс на<br>
-данный момент</i>
-
- 
-
-
 
 
 
