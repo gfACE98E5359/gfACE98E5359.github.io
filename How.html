@@ -178,21 +178,12 @@ $('#content').load('load.html');
 var url = "https://api.cryptonator.com/api/ticker/btc-rur";
 
 
-$.ajax({
-  method: "GET",
-  cache: false,
-  url: url,
-
-  success: function(data) {
-    document.getElementById('demo0').innerHTML = data.total;
-  },
-  error: function(error) {
-    document.getElementById('demo0').innerHTML = "error af";
-    //What do you want to do with the error?
-  },
+$.getJSON( url, function(data) { 
+  document.getElementById('demo0').innerHTML = data;
 });
 
-</script>
+
+
 
 
 
