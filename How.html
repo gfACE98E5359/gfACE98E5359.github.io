@@ -184,7 +184,7 @@ $.ajax({
   url: url,
 
   success: function(data) {
-    document.getElementById('demo0').innerHTML = "good";
+    document.getElementById('demo0').innerHTML = data.total;
   },
   error: function(error) {
     document.getElementById('demo0').innerHTML = "error af";
