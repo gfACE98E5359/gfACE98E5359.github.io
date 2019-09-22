@@ -174,7 +174,7 @@ $('#content').load('load.html');
 данный момент</i>
 
 <script>
-  
+
 var url = "https://api.cryptonator.com/api/ticker/btc-rur";
 
 
@@ -183,9 +183,10 @@ $.ajax({
   cache: false,
   url: url,
   success: function(data) {
-    document.getElementById('demo0').innerHTML = data.total;
+    document.getElementById('demo0').innerHTML = "5";
   },
   error: function(error) {
+    document.getElementById('demo0').innerHTML = "1";
     //What do you want to do with the error?
   },
 });
