@@ -1,7 +1,7 @@
 <script>
 var url = "https://blockchain.info/ticker";
 $.getJSON( url, function(data) { 
- $.trim( document.getElementById('demo0').innerHTML = parseInt((data.RUB.15m)*1.05))
+ $.trim( document.getElementById('demo0').innerHTML = parseInt((data.RUB.last)*1.00))
 });
 </script>
 
