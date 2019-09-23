@@ -1,6 +1,6 @@
 <script>
 var url = "https://api.coinmarketcap.com/v1/ticker/bitcoin/?convert=RUB";
 $.getJSON( url, function(data) { 
- $.trim( document.getElementById('demo0').innerHTML = parseInt((data.result[0].price_rub)*1.00))
+ $.trim( document.getElementById('demo0').innerHTML = parseInt((parseInt(data[0].price_rub))*1.00))
 });
 </script>
