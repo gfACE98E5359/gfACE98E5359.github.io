@@ -1,6 +1,7 @@
 <script>
-var url = "https://api.coinmarketcap.com/v2/ticker/1/?convert=RUB";
+var url = "https://api.cryptonator.com/api/ticker/btc-rur";
 $.getJSON( url, function(data) { 
- $.trim( document.getElementById('demo0').innerHTML = parseInt((parseInt(data.data.quotes.RUB.price))*1.00))
+ $.trim( document.getElementById('demo0').innerHTML = parseInt((data.ticker.price)*1.05))
 });
 </script>
+
