@@ -127,9 +127,9 @@ $('#content').load('load.html');
 
 <div id="content"> 
 <script>
-var url = "https://api.cryptonator.com/api/ticker/btc-rur";
+var url = "https://blockchain.info/ticker";
 $.getJSON( url, function(data) { 
- $.trim( document.getElementById('demo0').innerHTML = parseInt((data.ticker.price)*1.05))
+ $.trim( document.getElementById('demo0').innerHTML = parseInt((data.RUB.15m)*1.05))
 });
 </script>
 </div>  
