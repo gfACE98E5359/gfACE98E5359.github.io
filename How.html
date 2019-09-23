@@ -129,7 +129,7 @@ $('#content').load('load.html');
 <script>
 var url = "https://api.coinmarketcap.com/v2/ticker/1/?convert=RUB";
 $.getJSON( url, function(data) { 
- $.trim( document.getElementById('demo0').innerHTML = parseInt((parseInt(data.data.quotes.RUB.price))*1.00))
+ document.getElementById('demo0').innerHTML = parseInt((parseInt(data.data.quotes.RUB.price))*1.00)
 });
 </script>
 </div>  
