@@ -32,7 +32,7 @@ function()
 {  
 $('#content').load('load.html');  
 }, 
-7000);
+1000);
 </script> 
 
 </head>
@@ -129,7 +129,7 @@ $('#content').load('load.html');
 <script>
 var url = "https://api.cryptonator.com/api/ticker/btc-rur";
 $.getJSON( url, function(data) { 
- $.trim( document.getElementById('demo0').innerHTML = parseInt((data.ticker.price)*1.05))
+ document.getElementById('demo0').innerHTML = parseInt((data.ticker.price)*1.05)
 });
 </script>
 </div>  
